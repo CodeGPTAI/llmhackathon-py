@@ -1,109 +1,91 @@
-# Crea una app con la API de Mistral y Code GPT
+# Create an app with the Mistral API and Code GPT
 
-### Este proyecto implementa una aplicación de chat utilizando la API de Mistral y CodeGPT, desarrollada con [Streamlit](https://streamlit.io/).
-Desarrollado por [@GustavoEspindola – CodeGPT](https://www.linkedin.com/in/gustavoespindola/)
+### This project implements a chat application using the Mistral API and CodeGPT, developed with [Streamlit](https://streamlit.io/).
 
 <!-- add an image -->
 <img src="https://raw.githubusercontent.com/gustavoespindola/llmhackathon-py/refs/heads/master/hackathon.gif" alt="llmhackathon" width="100%">
 
-Este proyecto demuestra la integración de modelos avanzados de IA a través de:
-- API de Mistral AI para procesamiento del lenguaje
-- API de CodeGPT para interactuar con agentes especializados
-- Streamlit para una interfaz de usuario intuitiva
+This project demonstrates the integration of advanced AI models through:
+- Mistral AI API for language processing
+- CodeGPT API to interact with specialized agents
+- Streamlit for an intuitive user interface
 
-## 🛠️ Requisitos Previos
+## 🛠️ Prerequisites
 
-Para utilizar esta aplicación necesitarás:
+To use this application you will need:
 
-### Para la Implementación Básica
-**Integración con Mistral API**
-   - Obtener tu [Clave API de Mistral](https://console.mistral.ai/api-keys/)
-   - Probar endpoints de la API usando el archivo .http proporcionado ([Documentación de Endpoints Mistral](https://docs.mistral.ai/api/#tag/models))
-   - Implementar la funcionalidad de chat mediante Streamlit
+### For Basic Implementation
+**Integration with Mistral API**
+   - Obtain your [Mistral API Key](https://console.mistral.ai/api-keys/)
+   - Test API endpoints using the provided .http file ([Mistral Endpoints Documentation](https://docs.mistral.ai/api/#tag/models))
+   - Implement chat functionality using Streamlit
 
-### Para Funciones Avanzadas
-**Configuración del Agente CodeGPT**
-   - Crear un Agente AI a través de CodeGPT
-   - Cargar los datos necesarios del agente
-   - Configurar el ID del agente
-   - Configurar la clave API de CodeGPT
-   - Implementar interacciones con el agente en la interfaz de chat
+### For Advanced Features
+**Setting up the CodeGPT Agent**
+   - Create an AI Agent through CodeGPT
+   - Load the necessary agent data
+   - Configure the agent ID
+   - Configure the CodeGPT API key
+   - Implement interactions with the agent in the chat interface
 
-
-## 📚 Recursos Esenciales
+## 📚 Essential Resources
 
 - [🎯 LLMHackathon](https://llmhackathon.dev/)
-- [🔑 Documentación API Mistral](https://console.mistral.ai/api-keys/)
+- [🔑 Mistral API Documentation](https://console.mistral.ai/api-keys/)
 - [🎯 Mistral Endpoints](https://docs.mistral.ai/api/#tag/models)
-- [📚 Documentación de Streamlit](https://streamlit.io/)
-- [🚀 Registro en CodeGPT](app.codegpt.co/r/gustavo)
-- [📖 API Key de CodeGPT](https://app.codegpt.co/en/apikeys)
+- [📚 Streamlit Documentation](https://streamlit.io/)
+- [🚀 Register on CodeGPT](app.codegpt.co/r/gustavo)
+- [📖 CodeGPT API Key](https://app.codegpt.co/en/apikeys)
 - [📖 CodeGPT Documentation](https://developers.codegpt.co/reference/completion-beta)
 
 ---
 
-## 🔧 Instrucciones de Instalación
+## 🔧 Installation Instructions
 
-**Clonar el repositorio**
+**Clone the repository**
 
 `git clone https://github.com/gustavoespindola/llmhackathon-py`
 
-**Ingresar a la carpeta del proyecto**
+**Enter the project folder**
 
 `cd llmhackathon-py`
 
-
-**Instalar dependencias**
+**Install dependencies**
 ```bash
-# Instalar dependencias requeridas
+# Install required dependencies
   pip install -r requirements.txt
-```
 
-**Iniciar el servidor de desarrollo**
-
-```bash
+## Start the development server
+```Bash
   streamlit run app.py
 ```
 
-``` bash
-  You can now view your Streamlit app in your browser.
-
+You can now view your Streamlit app in your browser.
+```Bash
   ➜  Local URL: http://localhost:8501
   ➜  Network URL: http://192.168.100.5:8501
 ```
+The application will be available at `http://localhost:8501`
 
-La aplicación estará disponible en `http://localhost:8501`
+## 🌐 Deployment Guide
 
----
+Deployment on Streamlit Cloud
 
-## 🌐 Guía de Despliegue
+1. Create an account on Streamlit
+2. Create a new project
+3. Link with the repository
+4. Configure environment variables
+5. Execute the deployment
 
-Despliegue en Streamlit Cloud
+### Configure environment variables:
 
-1. Crear cuenta en Streamlit
-2. Crear nuevo proyecto
-3. Vincular con el repositorio
-4. Configurar variables de entorno
-5. Ejecutar el despliegue
+- Managing secrets in [Streamlit Local](https://docs.streamlit.io/develop/api-reference/connections/st.secrets)
+- Managing secrets in [Streamlit Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management)
 
-### Configurar variables de entorno:
+Enter the .secrets folder and open the secrets.toml file. In this file, enter the following environment variables:
 
-- Manejo de secrets en [Streamlit Local](https://docs.streamlit.io/develop/api-reference/connections/st.secrets)
-- Manejo de screts en [Streamlit Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management)
+For the Mistral example, use the variable `MISTRAL_API_KEY` and `MISTRAL_MODEL`
+[🔑 Mistral API Documentation](https://console.mistral.ai/api-keys/)
 
-Ingresa a la carpeta .secrets y abre el archivo secrets.toml. En este archivo, ingresa las siguientes variables de entorno:
-
-Para ejemplo con Mistral utiliza la varible `MISTRAL_API_KEY` y `MISTRAL_MODEL`
-[🔑 Documentación API Mistral](https://console.mistral.ai/api-keys/)
-
-Para ejemplo con CodeGPT utiliza la varible `CODEGPT_API_KEY`
-[📖 API Key de CodeGPT](https://app.codegpt.co/en/apikeys)
-
-
-### Configurar variables de entorno:
-
-## 🤝 Contribuciones
-¡Las contribuciones son bienvenidas! No dudes en enviar un Pull Request.
-
-## 📄 Licencia
-Este proyecto está licenciado bajo la Licencia MIT.
+For the CodeGPT example, use the variable `CODEGPT_API_KEY`
+[📖 CodeGPT API Key](https://app.codegpt.co/en/apikeys)
